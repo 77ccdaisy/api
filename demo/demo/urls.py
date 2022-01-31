@@ -16,14 +16,13 @@ Including another URLconf
 import imp
 from django.contrib import admin
 from django.urls import path,include
-from user import views as user_view
 
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework.routers import DefaultRouter
 from user import views
-from user.views import UserListAPIView
+
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -58,8 +57,7 @@ urlpatterns = [
     # 登入用的rest-api接口
     path('auth-rest/', include('rest_auth.urls')),
     # 自动匹配指定的方法
-    path('', views.UserListAPIView.as_view()),  
-        #自定義用戶列表
+
 
 ]
 
