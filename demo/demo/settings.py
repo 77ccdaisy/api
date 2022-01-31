@@ -29,11 +29,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin', 'django.contrib.auth',
-    'django.contrib.contenttypes', 'django.contrib.sessions',
-    'django.contrib.messages', 'django.contrib.staticfiles', 'rest_framework',
+    'django.contrib.admin', 
+    'django.contrib.auth',
+    'django.contrib.contenttypes', 
+    'django.contrib.sessions',
+    'django.contrib.messages', 
+    'django.contrib.staticfiles', 
+    'rest_framework',
     'user',
-    'drf_yasg'
+    'drf_yasg',           
+    'rest_framework.authtoken',   
+    'rest_auth',  
 ]
 
 MIDDLEWARE = [
@@ -120,3 +126,4 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
